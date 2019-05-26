@@ -28,28 +28,26 @@
     </div> 
     <div class="col-sm-4"> </div>
 </div>
-<div class="row"> 
+<div class="row" id="circleContainer"> 
  <div id="circle"> </div>
      <script> 
             anychart.onDocumentReady(function() {
 
                 // set the data
                 var data = [
-                    {x: "the", value: 10, exploded: true},
+                    {x: "the", value: 15, exploded: true},
                     {x: "I", value: 10, exploded: true},
                     {x: "is", value: 10, exploded: true},
-                    {x: "you", value: 10, exploded: true},
+                    {x: "you", value: 15, exploded: true},
                     {x: "he", value: 10, exploded: true},
                     {x: "she", value: 10, exploded: true},
-                    {x: "today", value: 10, exploded: true},
                     {x: "in", value: 10, exploded: true},
                     {x: "it", value: 10, exploded: true},
-                    {x: "came", value: 10, exploded: true},
-                    {x: "has", value: 10, exploded: true},
+                    {x: "came", value: 15, exploded: true},
+                    {x: "has", value: 15, exploded: true},
                     {x: "do", value: 10, exploded: true},
-                    {x: "want", value: 10, exploded: true},
-                    {x: "like", value: 10, exploded: true},
-                    {x: "have", value: 10, exploded: true}
+                    {x: "want", value: 15, exploded: true},
+                    {x: "have", value: 15, exploded: true}
                 ];
              
 
@@ -62,9 +60,11 @@
                 // add the data
                 chart.data(data);
               
-              // sort elements
-              chart.sort("desc");
 
+              //change pie size 
+              chart.radius("48%"); 
+              //aqua style
+              //chart.fill("aquastyle");
                 // change the font size 
              chart.labels().fontSize(23); 
                // set legend position
