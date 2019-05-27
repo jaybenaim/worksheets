@@ -16,11 +16,12 @@
 
   </head>
   <body>
-<div class="container" > 
+<div class="container-fluid" > 
 
-        <nav class="navbar "> 
+        <nav class="navbar"> 
                 <a href="index.html" class="navbar navbar-primary">Roll and Match </a>
-            </nav> 
+                <a href="page2.html" class="navbar-primary">Match and Cover</a>
+              </nav> 
     <div id="title" class="row"> 
     <div class="col-sm-4"> </div>
     <div class="col-sm-4">
@@ -35,48 +36,48 @@
 
                 // set the data
                 var data = [
-                    {x: "the", value: 15, exploded: true},
-                    {x: "I", value: 10, exploded: true},
-                    {x: "is", value: 10, exploded: true},
-                    {x: "you", value: 15, exploded: true},
-                    {x: "he", value: 10, exploded: true},
-                    {x: "she", value: 10, exploded: true},
-                    {x: "in", value: 10, exploded: true},
-                    {x: "it", value: 10, exploded: true},
-                    {x: "came", value: 15, exploded: true},
-                    {x: "has", value: 15, exploded: true},
-                    {x: "do", value: 10, exploded: true},
-                    {x: "want", value: 15, exploded: true},
-                    {x: "have", value: 15, exploded: true}
+                    {x: "the", value: 15, exploded: false},
+                    {x: "I", value: 10, exploded: false},
+                    {x: "is", value: 10, exploded: false},
+                    {x: "you", value: 15, exploded: false},
+                    {x: "he", value: 10, exploded: false},
+                    {x: "she", value: 10, exploded: false},
+                    {x: "in", value: 10, exploded: false},
+                    {x: "it", value: 10, exploded: false},
+                    {x: "came", value: 15, exploded: false},
+                    {x: "has", value: 15, exploded: false},
+                    {x: "do", value: 10, exploded: false},
+                    {x: "want", value: 15, exploded: false},
+                    {x: "have", value: 15, exploded: false}
+                    
                 ];
-             
+                
 
                 // create the chart
                 var chart = anychart.pie();
               
                 // set the chart title
                //  chart.title("Sight Words");
-              
+               
                 // add the data
                 chart.data(data);
               
 
               //change pie size 
-              chart.radius("48%"); 
+              chart.radius("43%"); 
+              chart.explode("12%");
               //aqua style
               //chart.fill("aquastyle");
                 // change the font size 
-             chart.labels().fontSize(23); 
+                chart.labels().fontSize(23); 
                // set legend position
                 chart.legend().position("right");
                 // set items layout
                 chart.legend().itemsLayout("vertical");
-
-                
+                chart.legend().fontSize(26);
                 // add the words instead of percentages
                 chart.labels().format("{%x}");
-
-
+                
 
                 // display the chart in the container
                 chart.container('circle');
