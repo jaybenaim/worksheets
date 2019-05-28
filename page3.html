@@ -10,83 +10,104 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!--Css-->
     <link rel="stylesheet" href="page3.css"> 
-    <!--piechart-->
-    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
-      <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 
   </head>
   <body>
-<div class="container-fluid" > 
+<div class="container" > <header> 
+    <nav class="navbar"> 
+        <a href="index.html" class="navbar navbar-primary">Home</a>
+        <a href="page2.html" class="navbar navbar-primary"> Roll and Match</a>
+        <a href="page4.html" class="navbar navbar-primary"> Sight Words </a>
 
-        <nav class="navbar"> 
-                <a href="index.html" class="navbar navbar-primary">Roll and Match </a>
-                <a href="page2.html" class="navbar-primary">Match and Cover</a>
-              </nav> 
+    </nav> 
+    </header>
     <div id="title" class="row"> 
     <div class="col-sm-4"> </div>
     <div class="col-sm-4">
-        <h1>Sight Words</h1> 
+        <h1>Match and Cover</h1> 
     </div> 
     <div class="col-sm-4"> </div>
+    </div>
+    <div class="row"> 
+        <div class="col-sm-1"> 
+            <div id="box1">1</div>
+        </div>
+        <div class="col-sm-1"> 
+                <div id="box2">2</div>
+            </div>
+            <div class="col-sm-1"> 
+                    <div id="box3">3</div>
+                </div>
+                <div class="col-sm-1"> 
+                        <div id="box4">4</div>
+                    </div>
+                    <div class="col-sm-1"> 
+                            <div id="box5">5</div>
+                        </div>
+                        <div class="col-sm-1"> 
+                                <div id="box6">6</div>
+                            </div>
 </div>
-<div class="row" id="circleContainer"> 
- <div id="circle"> </div>
-     <script> 
-            anychart.onDocumentReady(function() {
+<div class="row"> 
+    <div class="col-sm-2"></div>
 
-                // set the data
-                var data = [
-                    {x: "the", value: 15, exploded: false},
-                    {x: "I", value: 10, exploded: false},
-                    {x: "is", value: 10, exploded: false},
-                    {x: "you", value: 15, exploded: false},
-                    {x: "he", value: 10, exploded: false},
-                    {x: "she", value: 10, exploded: false},
-                    {x: "in", value: 10, exploded: false},
-                    {x: "it", value: 10, exploded: false},
-                    {x: "came", value: 15, exploded: false},
-                    {x: "has", value: 15, exploded: false},
-                    {x: "do", value: 10, exploded: true},
-                    {x: "want", value: 15, exploded: false},
-                    {x: "have", value: 15, exploded: false}
-                    
-                ];
-                
-
-                // create the chart
-                var chart = anychart.pie();
-              
-                // set the chart title
-               //  chart.title("Sight Words");
-               
-                // add the data
-                chart.data(data);
-              
-
-              //change pie size 
-              chart.radius("38%"); 
-              chart.explode("12%");
-              //aqua style
-              //chart.fill("aquastyle");
-                // change the font size 
-                chart.labels().fontSize(23); 
-               // set legend position
-                chart.legend().position("right");
-                // set items layout
-                chart.legend().itemsLayout("vertical");
-                chart.legend().fontSize(26);
-                // add the words instead of percentages
-                chart.labels().format("{%x}");
-                
-
-                // display the chart in the container
-                chart.container('circle');
-                chart.draw();
-              
-              });
-     </script>
-     
-      
+    <div id="table" class="col-sm-8"> 
+        <table class="table"> 
+            <thead> 
+                <tr> 
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr> 
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>5</td>
+                </tr>
+                <tr> 
+                    <td>1</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr> <tr> 
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>4</td>
+                </tr>
+                <tr> 
+                    <td>6</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    </tr>
+                <tr> 
+                    <td>5</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+<div class="col-sm-2"> </div>
 </div>
 
   </div>
